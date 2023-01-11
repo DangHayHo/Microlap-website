@@ -1,3 +1,4 @@
+
 <div class="group-title">
             <span class="big-label">Khóa học sẵn sàng</span>
             <div class="center-line"></div>
@@ -10,11 +11,11 @@
                         <img src="https://storage.googleapis.com/cms-storage-bucket/75c5b74c32dfd7b7e8f3.jpg" alt="course-name"/>
                     </div>
                     <button class="mdc-button mdc-button--outlined">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">Xem chi tiết</span>
+                    <a style="text-decoration:none" href="{{route('course')}}">  <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Xem chi tiết</span></a>
                     </button>
                     <button class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__label">Mua khóa học</span>
+                    <a style="text-decoration:none" href="{{route('course')}}">  <span class="mdc-button__label">Mua khóa học</span></a>
                     </button>
 
                     <div class="course-price">
@@ -63,11 +64,11 @@
                         <img src="https://fingers-site-production.s3.eu-central-1.amazonaws.com/uploads/images/NYgf3QgEdUpHTR7YIYacJanBU3JEeDxmIKGOUKcD.jpg" alt="course-name"/>
                     </div>
                     <button class="mdc-button mdc-button--outlined">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">Xem chi tiết</span>
+                    <a style="text-decoration:none" href="{{route('course')}}">  <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Xem chi tiết</span></a>
                     </button>
                     <button class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__label">Mua khóa học</span>
+                    <a style="text-decoration:none" href="{{route('course')}}">  <span class="mdc-button__label">Mua khóa học</span></a>
                     </button>
 
                     <div class="course-price">
@@ -109,4 +110,3 @@
             </div>
         </div>
      
-       

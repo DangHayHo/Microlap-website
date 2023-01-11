@@ -1,4 +1,4 @@
-@extends('pages.head')
+@extends('shares.head')
 
 @section('head')
 @endsection
@@ -14,8 +14,8 @@
                 <div class="menu-desktop">
                     <div class="menu">
                         <ul>
-                            <li><a href="#">Trang chủ</a></li>
-                            <li><a href="#">Khóa học</a></li>
+                            <li><a href="{{route('home')}}">Trang chủ</a></li>
+                            <li><a href="{{route('course')}}'">Khóa học</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Hợp tác</a></li>
                         </ul>
@@ -45,10 +45,10 @@
                             </div>
                             <div class="dropdown-content" id="menu">
                                 <ul>
-                                    <li><a href="#">Thông tin Profile</a></li>
-                                    <li><a href="#">Khóa học của tôi</a></li>
+                                    <li><a href="{{route('profile')}}">Thông tin Profile</a></li>
+                                    <li><a href="{{route('course')}}">Khóa học của tôi</a></li>
                                     <li><a href="#">Tài khoản VIP</a></li>
-                                    <li><a href="#">Đăng xuất</a></li>
+                                    <li><a href="{{route('client')}}">Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,10 +62,10 @@
                     </div>
                     <div class="dropdown-content-mobile" id="menu-mobile">
                         <ul>
-                            <li><a href="#">Thông tin Profile</a></li>
-                            <li><a href="#">Khóa học của tôi</a></li>
+                            <li><a href="{{route('profile')}}">Thông tin Profile</a></li>
+                            <li><a href="{{route('course')}}">Khóa học của tôi</a></li>
                             <li><a href="#">Tài khoản VIP</a></li>
-                            <li><a href="#">Đăng xuất</a></li>
+                            <li><a href="{{route('client')}}">Đăng xuất</a></li>
                         </ul>
                     </div>
 
@@ -84,8 +84,8 @@
         <div class="menu-mobile">
             <div class="menu">
                 <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Khóa học</a></li>
+                    <li><a href="{{route('home')}}">Trang chủ</a></li>
+                    <li><a href="{{route('course')}}">Khóa học</a></li>
                     <li><a href="#">Blogs</a></li>
                     <li><a href="#">Hợp tác</a></li>
                     <li>
@@ -108,12 +108,12 @@
     <div class="banner">
         <div class="image-box">
             <div class="content-box">
-            <img src="{{asset('assets/images/bg_header.jpg')}}" alt="banner"  />
+            <!-- <img src="{{asset('assets/images/bg_header.jpg')}}" /> -->
             
                 <span class="first-quote">Đường dài vạn dặm bắt đầu từ một bước chân</span>
                 <span class="second-quote">Đóng góp vào chất lượng nhân sự CNTT Việt Nam</span>
                 <button class="mdc-button mdc-button--raised">
-                    <span class="mdc-button__label">Tạo tài khoản miễn phí</span>
+                  <a style="text-decoration:none" href="{{route('register')}}">  <span class="mdc-button__label">Tạo tài khoản miễn phí</span></a>
                 </button>
             </div>
         </div>
@@ -136,7 +136,9 @@
                 <img src="https://www.bikevo.com/img/upload/20171103162915-qa-1024x587.png" alt="qa" />
             </div>
         </div>
-     @include('index.Khoahoc')
+
+        <x-khoahoc />
+        
       <div style="height:70px;"></div>
        
     </div>

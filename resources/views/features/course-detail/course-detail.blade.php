@@ -1,5 +1,5 @@
-@extends('pages.head')
-
+@extends('shares.head')
+@extends('shares.footer')
 @section('head')
 @endsection
 
@@ -14,8 +14,8 @@
                 <div class="menu-desktop">
                     <div class="menu">
                         <ul>
-                            <li><a href="#">Trang chủ</a></li>
-                            <li><a href="#">Khóa học</a></li>
+                            <li><a href="{{route('home')}}">Trang chủ</a></li>
+                            <li><a href="{{route('course')}}">Khóa học</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Hợp tác</a></li>
                         </ul>
@@ -23,11 +23,11 @@
                     <div class="account-action">
                         <div class="guest">
                             <button style="margin-right: 10px;" class="mdc-button mdc-button--outlined">
-                                <span class="mdc-button__label">Đăng ký</span>
+                               <span class="mdc-button__label"><a style="text-decoration:none" href="{{route('register')}}"> Đăng ký</a></span>
                             </button>
                             <button class="mdc-button mdc-button--outlined">
-                                <span class="mdc-button__ripple"></span>
-                                <span class="mdc-button__label">Đăng nhập</span>
+                            <a style="text-decoration:none" href="{{route('login')}}">  <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label">Đăng nhập</span></a>
                             </button>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
 </header>
 
 <main class="mdc-top-app-bar--fixed-adjust">
-   @include('course-detail.Gioithieukhoahoc')
+     <x-gioithieukhoahoc />
 
         <div style="margin-bottom: 50px">
             <div class="group-title">
@@ -81,13 +81,14 @@
                     <p style="padding: 0px 15px 15px 15px">Khi Code4Func xác nhận bạn đã chuyển khoản, khoá học sẽ được mở cho tài khoản của bạn. Bạn có thể vào mục khoá học trong menu profile để xem những khoá học bạn đã mua trên Code4Func.com Trong trường hợp bạn vẫn không thể truy cập khoá học hãy liên hệ ngay với Code4Func để được trợ giúp.</p>
                 </div>
             </div>
+            <div style="height :70px;"></div>
         </div>
+        
     </div>
 </main>
 
-<footer>
-    <div class="copyright">©2022 microlap.vn, all rights reserved.</div>
-</footer>
+@section('footer')
+@endsection
 <script>
     window.addEventListener('click', function(e){
         let menu = document.getElementById("menu");

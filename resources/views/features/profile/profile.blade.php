@@ -1,4 +1,4 @@
-@extends('pages.head')
+@extends('shares.head')
 @section('head')
 <body>
 
@@ -38,10 +38,10 @@
                             </div>
                             <div class="dropdown-content" id="menu">
                                 <ul>
-                                    <li><a href="#">Thông tin Profile</a></li>
-                                    <li><a href="#">Khóa học của tôi</a></li>
+                                    <li><a href="{{route('client')}}">Thông tin Profile</a></li>
+                                    <li><a href="{{route('course')}}">Khóa học của tôi</a></li>
                                     <li><a href="#">Tài khoản VIP</a></li>
-                                    <li><a href="#">Đăng xuất</a></li>
+                                    <li><a href="{{route('client')}}">Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -78,9 +78,9 @@
         <div class="settings-container">
         <div class="sidebar" style="display: flex; flex-direction: column; height: 100%">
             <ul>
-                <li><a href="#">Thông tin Profile</a></li>
-                <li><a href="#">Khóa học của tôi</a></li>
-                <li><a href="#">Đổi mật khẩu</a></li>
+                <li><a href="{{route('profile')}}">Thông tin Profile</a></li>
+                <li><a href="{{route('course')}}">Khóa học của tôi</a></li>
+                <li><a href="{{route('login')}}">Đổi mật khẩu</a></li>
             </ul>
         </div>
         <div class="content" style="display: flex; flex-direction: column; height: 100%">
