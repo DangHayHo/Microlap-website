@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
-    <title>Code4Func | Kỹ Thuật Lập Trình</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="{{asset('assets/css/material-components-web.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
-    <script src="{{asset('assets/js/material-components-web.min.js')}}"></script>
-</head>
+@extends('pages.head')
+@section('head')
 <body>
 
 <header class="mdc-top-app-bar">
@@ -143,3 +134,4 @@
 </script>
 </body>
 </html>
+@endsection

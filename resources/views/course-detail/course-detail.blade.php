@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
-    <title>MICROLAP | Học Lập Trình</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="{{asset('assets/css/material-components-web.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
-    <script src="{{asset('assets/js/material-components-web.min.js')}}"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+@extends('pages.head')
+
+@section('head')
+@endsection
+
 <header class="mdc-top-app-bar">
     <div class="mdc-top-app-bar__row">
         <div class="header-container">
@@ -66,31 +58,29 @@
 </header>
 
 <main class="mdc-top-app-bar--fixed-adjust">
-    <div class="account-wrapper">
-        <h2 style="margin-bottom: 20px;">Đăng nhập tài khoản</h2>
-        <div class="account-container">
-            <div class="c4f-input">
-                <label class="mdc-text-field mdc-text-field--filled">
-                    <span class="mdc-text-field__ripple"></span>
-                    <span class="mdc-floating-label" id="email">Email</span>
-                    <input class="mdc-text-field__input" type="email" aria-labelledby="email">
-                    <span class="mdc-line-ripple"></span>
-                </label>
+   @include('course-detail.Gioithieukhoahoc')
+
+        <div style="margin-bottom: 50px">
+            <div class="group-title">
+                <span class="big-label">ĐĂNG KÝ KHÓA HỌC</span>
+                <div class="center-line"></div>
             </div>
+            <div class="buy-course">
+                <div class="steps">
+                    <h2>Bước 1: Chuyển khoản</h2>
+                    <ul>
+                        <li>Giá khoá học: <span style="font-weight: bold; color: red">750,000 VNĐ</span></li>
+                        <li>Ngân hàng: Vietcombank, chi nhánh Quang Trung, Gò Vấp, HCM</li>
+                        <li>Chủ Thẻ: Nguyễn Văn Kiên</li>
+                        <li>STK: <span style="color: green; font-weight: bold">0071000788228</span></li>
+                        <li><p>Ghi chú khi chuyển khoản (bắt buộc): Phone + Tên khoá học. <br/>Ví dụ bạn đăng ký tài khoản trên Code4Func với phone là: 0973288688 và muốn mua khoá học "Flutter A-Z" thì ghi chú sẽ là: 0973901789 Flutter A-Z</p></li>
+                    </ul>
 
-            <div class="c4f-input">
-                <label class="mdc-text-field mdc-text-field--filled">
-                    <span class="mdc-text-field__ripple"></span>
-                    <span class="mdc-floating-label" id="password">Mật khẩu</span>
-                    <input class="mdc-text-field__input" type="password" aria-labelledby="password">
-                    <span class="mdc-line-ripple"></span>
-                </label>
+                    <br />
+                    <h2>Bước 2: Xác nhận</h2>
+                    <p style="padding: 0px 15px 15px 15px">Khi Code4Func xác nhận bạn đã chuyển khoản, khoá học sẽ được mở cho tài khoản của bạn. Bạn có thể vào mục khoá học trong menu profile để xem những khoá học bạn đã mua trên Code4Func.com Trong trường hợp bạn vẫn không thể truy cập khoá học hãy liên hệ ngay với Code4Func để được trợ giúp.</p>
+                </div>
             </div>
-
-            <button class="mdc-button mdc-button--raised">
-                <span class="mdc-button__label">Đăng nhập</span>
-            </button>
-
         </div>
     </div>
 </main>
@@ -98,7 +88,7 @@
 <footer>
     <div class="copyright">©2022 microlap.vn, all rights reserved.</div>
 </footer>
-<script type="application/javascript">
+<script>
     window.addEventListener('click', function(e){
         let menu = document.getElementById("menu");
         if (document.getElementById('avatar-box').contains(e.target)){
@@ -114,6 +104,23 @@
             menuMobile.style.display = "none";
         }
     });
+
+    let coll = document.getElementsByClassName("course-cate-collapsible");
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].classList.toggle("active");
+        let content = coll[i].nextElementSibling;
+        content.style.maxHeight = content.scrollHeight + "px";
+
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 </script>
 </body>
 </html>
