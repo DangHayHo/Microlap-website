@@ -1,3 +1,4 @@
+<div>
 <div class="course-content">
         <div class="group-title">
             <span class="big-label">Giới thiệu khóa Học Flutter A-Z</span>
@@ -84,3 +85,4 @@
                 </div>
             </div>
         </div>
+</div>

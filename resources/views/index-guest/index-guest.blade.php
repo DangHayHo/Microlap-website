@@ -10,7 +10,7 @@
 
 @endsection
 <main class="mdc-top-app-bar--fixed-adjust">
-@include('index-guest.Title')
+<x-title />
     <div class="m-line"></div>
 
     <div class="courses">
@@ -65,9 +65,9 @@
             </div>
         </div>
 
-    @include('index-guest.Khoahoc')
-
-    @include('index-guest.Congdong')
+    <x-khoahoc />
+     
+    <x-congdong />
         
         <div style="height: 70px;"></div>
     </div>

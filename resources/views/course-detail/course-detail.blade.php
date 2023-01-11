@@ -58,7 +58,7 @@
 </header>
 
 <main class="mdc-top-app-bar--fixed-adjust">
-   @include('course-detail.Gioithieukhoahoc')
+     <x-gioithieukhoahoc />
 
         <div style="margin-bottom: 50px">
             <div class="group-title">
@@ -81,7 +81,9 @@
                     <p style="padding: 0px 15px 15px 15px">Khi Code4Func xác nhận bạn đã chuyển khoản, khoá học sẽ được mở cho tài khoản của bạn. Bạn có thể vào mục khoá học trong menu profile để xem những khoá học bạn đã mua trên Code4Func.com Trong trường hợp bạn vẫn không thể truy cập khoá học hãy liên hệ ngay với Code4Func để được trợ giúp.</p>
                 </div>
             </div>
+            <div style="height :70px;"></div>
         </div>
+        
     </div>
 </main>
 

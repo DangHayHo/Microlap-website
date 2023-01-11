@@ -108,7 +108,7 @@
     <div class="banner">
         <div class="image-box">
             <div class="content-box">
-            <img src="{{asset('assets/images/bg_header.jpg')}}" alt="banner"  />
+            <!-- <img src="{{asset('assets/images/bg_header.jpg')}}" /> -->
             
                 <span class="first-quote">Đường dài vạn dặm bắt đầu từ một bước chân</span>
                 <span class="second-quote">Đóng góp vào chất lượng nhân sự CNTT Việt Nam</span>
@@ -136,7 +136,9 @@
                 <img src="https://www.bikevo.com/img/upload/20171103162915-qa-1024x587.png" alt="qa" />
             </div>
         </div>
-     @include('index.Khoahoc')
+
+        <x-khoahoc />
+        
       <div style="height:70px;"></div>
        
     </div>
