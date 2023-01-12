@@ -1,4 +1,12 @@
 <div>
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:resources/views/features/home/title.blade.php
+========
+    
+
+>>>>>>>> a5d7aa200807208703d33db7676abf1de1ff2ce8:resources/views/components/title.blade.php
+>>>>>>> a5d7aa200807208703d33db7676abf1de1ff2ce8
 <div>
         <div class="menu-mobile">
             <div class="menu">
@@ -31,7 +39,11 @@
                 <span class="first-quote">Đường dài vạn dặm bắt đầu từ một bước chân</span>
                 <span class="second-quote">Cùng nhau đóng góp vào chất lượng nhân sự CNTT Việt Nam</span>
                 <button class="mdc-button mdc-button--raised">
+<<<<<<< HEAD
                 <a style="text-decoration:none" href="{{route('register')}}">      <span class="mdc-button__label">Tạo tài khoản miễn phí</span></a>
+=======
+                <a style="text-decoration:none" href="{{route('register')}}">  <span class="mdc-button__label">Tạo tài khoản miễn phí</span> </a>
+>>>>>>> a5d7aa200807208703d33db7676abf1de1ff2ce8
                 </button>
             </div>
         </div>
