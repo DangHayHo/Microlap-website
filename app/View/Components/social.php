@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class congdong extends Component
+class social extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class congdong extends Component
      */
     public function render()
     {
-        return view('components.congdong');
+        return view('components.social');
     }
 }

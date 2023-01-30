@@ -1,4 +1,4 @@
-
+<div>
 <div class="group-title">
             <span class="big-label">Khóa học sẵn sàng</span>
             <div class="center-line"></div>
@@ -109,4 +109,4 @@
                 </div>
             </div>
         </div>
-     
+</div>

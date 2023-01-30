@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Khoahoc extends Component
+class videos extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class Khoahoc extends Component
      */
     public function render()
     {
-        return view('components.khoahoc');
+        return view('components.videos');
     }
 }

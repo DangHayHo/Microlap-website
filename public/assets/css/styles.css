@@ -274,14 +274,11 @@ body {
 
 .banner {
     width: 100%;
-    height: 250px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-content: center;
     text-align: center;
-    /* background: url(images/bg_header.jpg); */
-    background: url(../images/bg_header.jpg);
 }
 
 .banner .image-box {
@@ -289,6 +286,7 @@ body {
     width: 100%;
     height: 250px;
     position: relative;
+    background: url('../images/bg_header.jpg');
 }
 
 .m-line {
@@ -385,6 +383,8 @@ body {
 
 .projects img {
     max-width:100%;
+    height: auto;
+   
 }
 
 .projects .mdc-card {
@@ -392,12 +392,21 @@ body {
     -moz-box-flex: 1;
     box-flex: 1;
     margin: 5px;
+    
+    
     background-color: #fff;
     text-align: center;
     -webkit-flex: 1 1 auto;
     flex: 1 0 33%;
+    position: relative;
+   
+    
 }
-
+.text-center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 
 .courses {
     display: flex;
@@ -435,7 +444,7 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-   
+    justify-content: center;
 }
 
 .yt-social-box {
@@ -886,7 +895,7 @@ footer {
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: rgb(0, 86, 210, 0.1);
+    background-color: rgba(116, 125, 138, 0.1);
 }
 
 .account-wrapper {

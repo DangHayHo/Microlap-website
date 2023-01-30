@@ -38,10 +38,10 @@
                             </div>
                             <div class="dropdown-content" id="menu">
                                 <ul>
-                                    <li><a href="{{route('client')}}">Thông tin Profile</a></li>
+                                    <li><a href="{{route('home')}}">Thông tin Profile</a></li>
                                     <li><a href="{{route('course')}}">Khóa học của tôi</a></li>
                                     <li><a href="#">Tài khoản VIP</a></li>
-                                    <li><a href="{{route('client')}}">Đăng xuất</a></li>
+                                    <li><a href="{{route('home')}}">Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </div>

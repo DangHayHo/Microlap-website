@@ -1,29 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 
 
+Route::get('/',[HomeController::class,'home'])->name('/');
+Route::get('home',[HomeController::class,'home'])->name('home');
+Route::get('login',[HomeController::class,'login'])->name('login');
+Route::get('register',[HomeController::class,'register'])->name('register');
+Route::get('course',[HomeController::class,'course'])->name('course');
+Route::get('profile',[HomeController::class,'profile'])->name('profile');
+Route::post("login/auth",[LoginController::class , 'LoginAuth']);
 
-Route::get('/', function () {
-    return view('features.home.home');
-})->name('/');
-Route::get('home', function () {
-    return view('features.home.home');
-})->name('home');
-Route::get('client', function () {
-    return view('features.home.client');
-})->name('client');
-Route::get('login', function () {
-    return view('features.login.login');
-})->name('login');
-Route::get('register', function () {
-    return view('features.register.signup');
-})->name('register');
-Route::get('course',function (){
-    return view('features.course-detail.course-detail');
-})->name('course');
-Route::get('profile',function (){
-    return view('features.profile.profile');
-})->name('profile');
 
 

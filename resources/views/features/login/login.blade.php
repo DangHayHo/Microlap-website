@@ -14,7 +14,7 @@
                 <div class="menu-desktop">
                     <div class="menu">
                         <ul>
-                            <li><a href="{{route('client')}}">Trang chủ</a></li>
+                            <li><a href="{{route('home')}}">Trang chủ</a></li>
                             <li><a href="{{route('course')}}">Khóa học</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Hợp tác</a></li>
@@ -56,7 +56,7 @@
         </div>
     </div>
 </header>
-
+<form method="POST" action="login/auth">
 <main class="mdc-top-app-bar--fixed-adjust">
     <div class="account-wrapper">
         <h2 style="margin-bottom: 20px;">Đăng nhập tài khoản</h2>
@@ -65,7 +65,7 @@
                 <label class="mdc-text-field mdc-text-field--filled">
                     <span class="mdc-text-field__ripple"></span>
                     <span class="mdc-floating-label" id="email">Email</span>
-                    <input class="mdc-text-field__input" type="email" aria-labelledby="email">
+                    <input class="mdc-text-field__input" type="email" placeholder="email">
                     <span class="mdc-line-ripple"></span>
                 </label>
             </div>
@@ -74,19 +74,21 @@
                 <label class="mdc-text-field mdc-text-field--filled">
                     <span class="mdc-text-field__ripple"></span>
                     <span class="mdc-floating-label" id="password">Mật khẩu</span>
-                    <input class="mdc-text-field__input" type="password" aria-labelledby="password">
+                    <input class="mdc-text-field__input" type="password" placeholder="password">
                     <span class="mdc-line-ripple"></span>
                 </label>
             </div>
 
-            <button class="mdc-button mdc-button--raised">
+            <button class="mdc-button mdc-button--raised" type="submit">
+            <input type="hidden" name="_token" id="" value="<?php echo csrf_token() ?>">
                 <span class="mdc-button__label">Đăng nhập</span>
+                @csrf
             </button>
 
         </div>
     </div>
 </main>
-
+</form>
 @section('footer')
 @endsection
 <script type="application/javascript">

@@ -13,7 +13,7 @@
                 <div class="menu-desktop">
                     <div class="menu">
                         <ul>
-                            <li><a href="{{route('client')}}">Trang chủ</a></li>
+                            <li><a href="{{route('home')}}">Trang chủ</a></li>
                             <li><a href="{{route('course')}}">Khóa học</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Hợp tác</a></li>
